@@ -4,7 +4,7 @@
     <Main />
     <prefooter />
     <footer-banner />
-    <footer />
+    <Footer />
     
   </div>
 </template>
@@ -15,6 +15,7 @@ import Header from "./components/header.vue";
 import Main from "./components/main.vue";
 import prefooter from "./components/prefooter.vue";
 import footerBanner from "./components/footer-banner.vue";
+import Footer from "./components/footer.vue";
 
 export default {
   name: "App",
@@ -23,6 +24,7 @@ export default {
     Main,
     prefooter,
     footerBanner,
+    Footer,
   },
 };
 </script>
@@ -32,5 +34,12 @@ export default {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+ul{
+  list-style-type: none;
+
+}
+a{
+  text-decoration: none;
 }
 </style>
