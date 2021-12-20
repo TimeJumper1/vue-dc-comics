@@ -4,44 +4,27 @@
             <div>
                 <h3>DC COMICS</h3>
                 <ul>
-                    <li><a href="#">Characters</a></li>
-                    <li><a href="#">Comics</a></li>
-                    <li><a href="#">Movies</a></li>
-                    <li><a href="#">Tv</a></li>
-                    <li><a href="#">qualcosa</a></li>
-                    <li><a href="#">qualcosa</a></li>
-                    <li><a href="#">qualcosa</a></li>
+                    <li v-for="(link, index) in comicsLinks" :key="index" ><a href="#">{{link.text}}</a></li>
+                    
                 </ul>
                 <h3>SHOP</h3>
                 <ul>
-                    <li><a href="#">qualcosa</a></li>
-                    <li><a href="#">qualcosa</a></li>
+                    <li v-for="(link, index) in shopLinks" :key="index" ><a href="#">{{link.text}}</a></li>
+                    
                 </ul>
             </div>
             <div>
                 <h3>DC</h3>
                 <ul>
-                    <li><a href="#">qualcosa</a></li>
-                    <li><a href="#">qualcosa</a></li>
-                    <li><a href="#">qualcosa</a></li>
-                    <li><a href="#">qualcosa</a></li>
-                    <li><a href="#">qualcosa</a></li>
-                    <li><a href="#">qualcosa</a></li>
-                    <li><a href="#">qualcosa di molto </a></li>
-                    <li><a href="#">qualcosa</a></li>
-                    <li><a href="#">qualcosa</a></li>
-                    <li><a href="#">qualcosa</a></li>
-                    <li><a href="#">qualcosa</a></li>
+                   <li v-for="(link, index) in dcLinks" :key="index" ><a href="#">{{link.text}}</a></li>
+                    
                 </ul>
             </div>
             <div>
                 <h3>SITES</h3>
                 <ul>
-                    <li><a href="#">qualcosa</a></li>
-                    <li><a href="#">qualcosa</a></li>
-                    <li><a href="#">qualcosa</a></li>
-                    <li><a href="#">qualcosa</a></li>
-                    <li><a href="#">qualcosa</a></li>
+                    <li v-for="(link, index) in sitesLinks" :key="index" ><a href="#">{{link.text}}</a></li>
+                    
                 </ul>
             </div>
         </div>
@@ -55,6 +38,95 @@
 
 export default {
     name: "footerBanner",
+    data: function() {
+        return {
+            comicsLinks: [
+                {
+                    text: 'Charaters',
+                },
+                {
+                    text: 'Comics',
+                },
+                {
+                    text: 'Movies',
+                },
+                {
+                    text: 'TV',
+                },
+                {
+                    text: 'Games',
+                },
+                {
+                    text: 'Videos',
+                },
+                {
+                    text: 'news',
+                },
+                
+            ],
+            shopLinks:[
+                {
+                    text: 'Shop DC'
+                },
+                {
+                    text: 'Shop DC Collectibles'
+                },
+            ],
+            dcLinks:[
+                {
+                    text:'Terms Of Use'
+                },
+                {
+                    text:'Privacy policy (new)'
+                },
+                {
+                    text:'AD Choices'
+                },
+                {
+                    text:'Advertising'
+                },
+                {
+                    text:'Jobs'
+                },
+                {
+                    text:'Subscription'
+                },
+                {
+                    text:'Talent Workshops'
+                },
+                {
+                    text:'CPSC Certificates'
+                },
+                {
+                    text:'Ratings'
+                },
+                {
+                    text:'Shop Help'
+                },
+                {
+                    text:'Contact Us'
+                },
+            ],
+            sitesLinks:[
+                {
+                    text:'DC'
+                },
+                {
+                    text:'MAD Magazine'
+                },
+                {
+                    text:'DC Kids'
+                },
+                {
+                    text:'DC Universe'
+                },
+                {
+                    text:'DC Power Visa'
+                },
+            ],
+            
+        };
+    },
     props: {
     msg: String,
   },
@@ -62,6 +134,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../style/variables';
 .footer-banner{
     background-image: url("../assets/img/footer-bg.jpg");
     height: 400px;
@@ -79,7 +152,7 @@ export default {
     .right-elements{
         display: flex;
         justify-content: space-between;
-        width: 35%;
+        width: 40%;
         div{
             width: calc(100% / 3);
             padding: 20px;

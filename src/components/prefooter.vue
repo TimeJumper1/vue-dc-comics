@@ -23,11 +23,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+@import '../style/variables';
 main{
     height: 130px;
     width: 100%;
-    background-color: #0c7cec;
+    background-color: $primary-color;
     color: white;
     .container{
         height: 100%;

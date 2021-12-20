@@ -5,16 +5,8 @@
         </div>
         <div class="menu">
             <ul>
-                <li><a href="#"> testo</a></li>
-                <li><a href="#"> testo</a></li>
-                <li><a href="#"> testo</a></li>
-                <li><a href="#"> testo</a></li>
-                <li><a href="#"> testo</a></li>
-                <li><a href="#"> testo</a></li>
-                <li><a href="#"> testo</a></li>
-                <li><a href="#"> testo</a></li>
-                <li><a href="#"> testo</a></li>
-                <li ><a class="active" href="#"> testo</a></li>
+                <li v-for="(link, index) in links" :key="index" ><a :class="{active: link.active}" href="#"> {{ link.text }}</a></li>
+                
             </ul>
         </div>
     </header>
@@ -24,6 +16,53 @@
 
 export default {
     name: "Header",
+    data: function() {
+        return {
+            links: [
+                {
+                    text: 'CHARACTERS',
+                    active: false
+                },
+                {
+                    text: 'COMICS',
+                    active: true
+                },
+                {
+                    text: 'MOVIES',
+                    active: false
+                },
+                {
+                    text: 'TV',
+                    active: false
+                },
+                {
+                    text: 'GAMES',
+                    active: false
+                },
+                {
+                    text: 'COLLECTIBLES',
+                    active: false
+                },
+                {
+                    text: 'VIDEOS',
+                    active: false
+                },
+                {
+                    text: 'FANS',
+                    active: false
+                },
+                {
+                    text: 'NEWS',
+                    active: false
+                },
+                {
+                    text: 'SHOP',
+                    active: false
+                },
+            ]
+            
+        };
+    },
     props: {
     msg: String,
   },
@@ -31,6 +70,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../style/variables';
 header{
     height: 100px;
     width: 100%;
@@ -56,13 +96,14 @@ header{
                 a{
                     text-decoration: none;
                     color: black;
-                    padding: 35px 0;
+                    padding: 36px 0;
+                    font-size: 12px;
                 }
                 
             }
             .active{
-                color: #0c7cec;
-                border-bottom:6px solid #0c7cec ;
+                color: $primary-color;
+                border-bottom:6px solid $primary-color ;
             }
         }
     }

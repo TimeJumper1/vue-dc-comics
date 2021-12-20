@@ -24,6 +24,7 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+@import '../style/variables';
 footer{
     height: 100px;
     width: 100%;
@@ -33,7 +34,7 @@ footer{
     align-items: center;
     .btn{
         padding: 4px 10px;
-        border: 2px solid #0c7cec;
+        border: 2px solid $primary-color;
         a{
             color: white;
         }
