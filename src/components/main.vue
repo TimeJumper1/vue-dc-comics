@@ -7,7 +7,7 @@
         <a href="#">CURRENT SERIES</a>
     </div>
     <div class="comic-list">
-        <comicsItem v-for="(comic, index) in comicsInfo" :key="index" :comicObject="comicsInfo"/>
+        <comicsItem v-for="(comicsItem, index) in comicsInfo" :key="index" :comicObject="comicsItem" />
     </div>
     <div class="current-series central">
         <a  href="#">LEARN  MORE</a>

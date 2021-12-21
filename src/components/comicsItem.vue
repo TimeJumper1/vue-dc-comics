@@ -1,7 +1,7 @@
 <template>
     <div class="single-card">
         <img :src="comicObject.thumb" :alt="comicObject.series">
-        <h4>{{comicObject.series}}</h4>
+        <h4>{{ comicObject.series }}</h4>
     </div>
 </template>
 <script>
@@ -9,9 +9,7 @@
 
 export default {
     name: "comicsItem",
-    props: []
-    
-  
+    props: ['comicObject']
 }
 </script>
 
@@ -25,6 +23,10 @@ export default {
     img{
         width: 100%;
         height: auto;
+    }
+    h4{
+        color: white;
+        padding: 10px  0;
     }
 }
 
