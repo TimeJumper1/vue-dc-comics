@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <Header />
-    <Main />
+    <main>
+      <Main />
+    </main>
     <prefooter />
     <footer-banner />
     <Footer />
